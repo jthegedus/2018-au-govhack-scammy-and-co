@@ -1,0 +1,17 @@
+{
+  "name": "Scammy",
+  "version": "1.0",
+  "description": "Checks if the website you're visiting is a scam.",
+  "icons": { "128": "icon.png" },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["jquery.min.js", "scammy.js"],
+      "css": ["scammy.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    "alert.html"
+  ],
+  "manifest_version": 2
+}
