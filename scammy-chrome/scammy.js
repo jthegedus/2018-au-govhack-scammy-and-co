@@ -7,6 +7,9 @@ function scammyIgnore() {
 if (true) {
     $.get(chrome.extension.getURL('/alert.html'), function(data) {
         $(data).appendTo('body');
+        $('#scammy-alert-box img').attr('src', chrome.extension.getURL('/warning.png'));
         $('#scammy-alert-box button').click(scammyIgnore);
+        $('#scammy-alert-box').slideDown(1000);
+        $('#scammy-alert-box-dim').slideDown(1000);
     });
 }
